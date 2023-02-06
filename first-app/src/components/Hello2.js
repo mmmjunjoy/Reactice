@@ -1,7 +1,10 @@
-import React from 'react'
+// import React ,{Component} from "react";
 
-export default function Hello2() {
-  return (
-    <div>Hello2</div>
-  )
-}
+// class Hello2 extends Component{
+//   render(){
+    
+//     return <div> hello i am header component </div>
+//   }
+// }
+
+// export default Hello2;

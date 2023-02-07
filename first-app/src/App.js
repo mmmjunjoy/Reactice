@@ -1,59 +1,96 @@
 import './App.css';
 import React ,{Component} from 'react';
 
+// import Header from './components/header';
 // import Hello2 from './components/Hello2';
 
 
 class App extends Component{
-  // state, 현재 컴포턴트의 데이터
-  state = {
-    count: 0
-  };
+  constructor(props){
+    super(props);
+    console.log('constructor');
+  }
+  componentDidMount(){
+    console.log('componentDidMount');
 
-  countUp(){
-    this.setState({
-      count: this.state.count +1 
-    });
+
   }
 
-  countDown(){
-    this.setState({
-      count: this.state.count -1
-    })
+  componentDidUpdate(){
+    console.log("componentDidUpdate");
+
   }
+  componentWillUnmount(){
+    console.log('componentWillUnmount');
+
+  }
+
   render(){
-    return(
-      <div className="App">
-        <div>안녕하세요</div>
-        <PropTestClass count = {this.state.cont}/>
-        <div>
-          <span>{this.state.count}</span>
-        </div>
-        <div>
-          <button onClick={this.countUp.bind(this)}>count up!</button>
-          <button onClick={this.countDown.bind(this)}>count down!</button>
+    console.log('render');
 
-        </div>
-       
-      </div>
-    );
-  }
-}
-
-
-class PropTestClass extends Component{
-  render(){
     return (
-      <div>
-        <div>
-          <span>Hello i am testclass</span>
-        </div>
-        <div>받은 props의 데이터는 {this.props.count} 입니다.</div>
+      <div className='App'> 
+        Life cycle test
+        <Child/>
       </div>
     );
   }
 }
+class Child extends Component {
+  constructor(props) {
+    super(props);
+    console.log('Child: constructor');
+  }
+  componentDidMount() {
+    console.log('Child: componentDidMount');
+  }
+  componentDidUpdate() {
+    console.log('Child: componentDidUpdate');
+  }
+  componentWillUnmount() {
+    console.log('Child: componentWillUnmount');
+  }
+  render() {
+    console.log('Child: render');
 
+    return <div className="App">Life cycle test</div>;
+  }
+}
 
 
 export default App;
+
+  // state, 현재 컴포턴트의 데이터
+//   state = {
+//     headerMessage: "영화 소개 프로젝트"
+//   };
+
+  
+//   render(){
+//     return(
+//       <div className="App">
+
+//         <Header headerMessage={this.state.headerMessage}/>
+//         <div>Main content</div>
+       
+//       </div>
+//     );
+//   }
+// }
+
+
+// class PropTestClass extends Component{
+//   render(){
+//     return (
+//       <div>
+//         <div>
+//           <span>Hello i am testclass</span>
+//         </div>
+//         <div>받은 props의 데이터는 {this.props.count} 입니다.</div>
+//       </div>
+//     );
+//   }
+// }
+
+
+

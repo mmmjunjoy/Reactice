@@ -14,5 +14,5 @@
 <br>
 
 
-<div align = center> <h4> 쓰다,적다,저장하다 </h4> </div>
-<div align = center> <h4> 프론트를 알아가는 기쁨  </h4>  </div>
+<div align = center> <h4> 프론트를 알아가는 기쁨  </h4> </div>
+<div align = center> <h5> mmm.junjoy.com  </h5>  </div>

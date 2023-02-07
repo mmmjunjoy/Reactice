@@ -9,10 +9,10 @@
 
 <br>
 
-<div align = center> React 라이브러리를 학습하며 동적 웹사이트를 이해하고 직접 제작하는 것이 목표입니다.</div>
-
+<div align = center> React 라이브러리를 학습하며 동적 웹사이트를 이해하는 연습 공간입니다.</div>
+<div align = center>  실제 프로젝트는 다른 레포지토리에 저장해나가고 있습니다.</div>
 <br>
 
 
-<div align = center> <h4> 하나하나 기록해 보겠습니다. </h4> </div>
+<div align = center> <h4> 쓰다,적다,저장하다 </h4> </div>
 <div align = center> <h4> 프론트를 알아가는 기쁨  </h4>  </div>

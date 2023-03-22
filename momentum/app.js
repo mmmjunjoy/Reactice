@@ -193,6 +193,15 @@ console.dir(titles);
 
 //지금부터는 style을 바꿔보는 작업을 해보겠다.
 
-titles.style.color = "blue";
 
-titles.addEventListener()
+function handleTitleClick(){
+    titles.style.color = "red";
+ 
+
+}
+
+
+titles.addEventListener("click" , handleTitleClick);
+//titles.addEventListener("click" , handleTitleClick()); 이렇게
+// 할 경우에는 , 사용자가 클릭을 했을때 작동하는 것이 아니다.
+

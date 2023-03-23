@@ -195,13 +195,77 @@ console.dir(titles);
 
 
 function handleTitleClick(){
-    titles.style.color = "red";
- 
+     // 변수를 생성해주는 것이 좋다. const로
+    const currentColor = titles.style.color;
+    let newcolor ;
+     //여기서 ===는 값이 일치하는지 보기 위해서이다.
+    if(currentColor === "blue"){
+        newcolor = "tomato";
+    }else{
+        newcolor = "blue";
+
+    }
+    titles.style.color = newcolor;
 
 }
 
 
 titles.addEventListener("click" , handleTitleClick);
-//titles.addEventListener("click" , handleTitleClick()); 이렇게
-// 할 경우에는 , 사용자가 클릭을 했을때 작동하는 것이 아니다.
+// //titles.addEventListener("click" , handleTitleClick()); 이렇게
+// // 할 경우에는 , 사용자가 클릭을 했을때 작동하는 것이 아니다.
 
+// console.dir(titles)
+
+function handleMouse(){
+    titles.innerText = "JUNBO,HYUNA,HOYOUNG,YUNBIN";
+
+}
+
+function handleMouseleave(){
+    titles.innerText = "ICELINK";
+    
+
+}
+
+titles.addEventListener("mouseenter", handleMouse);
+titles.addEventListener("mouseleave", handleMouseleave);
+
+
+
+
+
+
+//active 사용 
+const h11 = document.querySelector("div.si h1");
+
+function handle(){
+    const actives = "active"
+    if(h11.classList.contains(actives)){
+        h11.classList.remove(actives);
+    } else{
+        h11.classList.add(actives);
+    }
+
+}
+
+//className과 classList는 차이가 있다.
+//className은 과거는 신경쓰지 않는다. 
+
+h11.addEventListener("click", handle);
+
+
+
+//toggle의 기능
+
+const zis = document.querySelector("div.zi h1");
+
+console.log(zis)
+
+function names(){
+
+    const change = "active"
+
+    zis.classList.toggle(change);
+}
+
+zis.addEventListener("click",names);

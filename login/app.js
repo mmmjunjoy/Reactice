@@ -1,28 +1,34 @@
-const loginForm = document.getElementById("login-form");
+const loginform = document.getElementById("login-form");
+const inputs = loginform.querySelector("input");
+const buttons = loginform.querySelector("button");
 
-const loginInput = loginForm.querySelector("input").value;
+const links = document.querySelector("a");
 
-const loginButton = loginForm.querySelector("button");
+const greet = document.querySelector("#greeting");
 
+const hiddens = "hidden";
 
+function submit(event){
+    event.preventDefault();
+    console.log(greet);
 
+    const username = inputs.value;
+    loginform.classList.add(hiddens);
+    greeting.innerText = `hello ${username}`;
 
-
-// function onlogin(){
-
-//     return(
-        
-//         loginInput.value
-//     )
-
-// }
-
-// loginButton.addEventListener("click" , onlogin);
-
-
-function printName() {
-    const loginInput = loginForm.querySelector("input").value;
     
-    document.getElementById("result").innerText = loginInput
-  
+    greeting.classList.remove(hiddens);
+
+
+
 }
+
+function clicks(event){
+    event.preventDefault();
+    console.dir(event);
+   
+}
+
+
+loginform.addEventListener("submit",submit);
+

@@ -1,19 +1,28 @@
 <!DOCTYPE html>
- <html lang ="en">
- <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name = "viesport" content="width=device-width,initial-scale=1.0"/>
-    <link rel="stylesheet" href="style.css">
-    <title>Momemtum</title>
- </head>
- <body>
-    <div id ="login-form">
-      <input  type ="text" onkeyup ="printName()" placeholder="what is your name?" />
-      <button>Log In</button>
-    </div>
-    <div id = 'result'>
-      
-    </div>
-    <script src ="app.js"></script>
- </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link  rel = "stylesheet" href="style.css" />
+    <title> Momentum app</title>
+  </head>
+  <body>
+    <form id = "login-form"  >
+
+        <input 
+            required 
+            maxlength = "15" 
+            type = "text"
+            placeholder="what is your name?"
+        />
+        <input type = "submit" value=" log in"/>
+
+    </form>
+    <h1 id="greeting" class = "hidden"></h1>
+    <!-- <a href = "http://nomadcoders.co"> go to course</a> -->
+
+    <script src = 'app.js'></script>
+  
+  </body>
+<html/>
+

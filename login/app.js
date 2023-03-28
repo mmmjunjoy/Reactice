@@ -7,28 +7,39 @@ const links = document.querySelector("a");
 const greet = document.querySelector("#greeting");
 
 const hiddens = "hidden";
+const usernames = "username";
 
 function submit(event){
     event.preventDefault();
     console.log(greet);
 
     const username = inputs.value;
+    localStorage.setItem(usernames,username);
     loginform.classList.add(hiddens);
-    greeting.innerText = `hello ${username}`;
-
-    
-    greeting.classList.remove(hiddens);
-
-
+    paintgreeting(username);
 
 }
 
-function clicks(event){
-    event.preventDefault();
-    console.dir(event);
+// function clicks(event){
+//     event.preventDefault();
+//     console.dir(event);
    
+// }
+
+function paintgreeting(usernamed){
+    greet.innerText = `hello ${usernamed}`;
+    greet.classList.remove(hiddens);
 }
 
 
-loginform.addEventListener("submit",submit);
 
+const saved = localStorage.getItem(usernames);
+
+if (saved === null){
+    loginform.classList.remove(hiddens);
+    loginform.addEventListener("submit",submit);
+    
+}else{
+    paintgreeting(saved);
+
+}

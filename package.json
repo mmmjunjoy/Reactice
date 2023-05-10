@@ -3,6 +3,7 @@
     "axios": "^1.4.0",
     "axois": "^0.0.1-security",
     "express": "^4.18.2",
+    "mysql": "^2.18.1",
     "recoil": "^0.7.7"
   }
 }

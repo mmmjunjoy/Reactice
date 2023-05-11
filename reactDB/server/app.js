@@ -58,13 +58,13 @@ const mysql = require('mysql');
 
 const db = mysql.createPool({
     host: 'localhost',
-    user: 'root',
-    password: 'whs20102011',
-    database: 'icelinks'
+    user: 'junjoy',
+    password: '1234',
+    database: 'icelink'
 });
 
 app.get('/test', (req,res) => {
-    db.query('SELECT * FROM table1' , (err,data) => {
+    db.query('SELECT * FROM user' , (err,data) => {
         if(!err) res.send({products :data});
         else res.send(err);
     })
